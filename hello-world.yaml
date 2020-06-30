@@ -4,6 +4,9 @@ metadata:
   name: hello-world-deployment
   labels:
     app: hello-world
+annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:dev-*
 spec:
   selector:
     matchLabels:
